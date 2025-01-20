@@ -1,0 +1,729 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pink:rgb(253, 26, 64);
+    --darkpink:rgb(187, 23, 50);
+    --lightpink:rgb(250, 127, 148);
+    --dark:rgb(37, 37, 37);
+}
+
+body{
+    background: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid var(--pink);
+    padding: .5rem 1rem 0rem 1rem;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    background: black;
+}
+
+.nav h1{
+    font-size: 55px;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+    padding-left:1rem ;
+}
+
+.nav h1 span{
+    color: var(--pink);
+    font-size: 65px;
+    text-decoration: none;
+}
+
+.list{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.line{
+    border-right: solid 2px var(--pink);
+    height: 3.5rem;
+
+}
+
+.nav .list ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav .list ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav .list ul li a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+button{
+    background: var(--pink);
+    padding: .5rem;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    height: 3.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--darkpink);
+    transform: scale(1.1);
+}
+
+button:active{
+    background-color: var(--lightpink);
+}
+
+.frame{
+    padding-top: 2%;
+}
+
+.frame img{
+    width: 100%;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 2%;
+    background: rgba(0, 0, 0, 0.719);
+    width: 100%;
+    height: 75.5rem;
+}
+
+.overlay-text{
+    position: absolute;
+    top: 25%;
+    padding-left: 5rem;
+    width: 50rem;
+}
+
+.overlay-text h2{
+    font-size: 65px;
+    -webkit-text-stroke: var(--pink) 3px;
+    text-decoration: underline;
+    text-underline-offset: 25px;
+}
+
+.overlay-text p{
+    padding-top: 2rem;
+    font-size: 24px;
+    padding-bottom: 1.5rem;
+}
+
+.welcome-btn .learn{
+    margin-left: 1rem;
+    border: solid var(--pink);
+    background-color: black;
+    color: var(--pink);
+}
+
+.welcome-btn .learn:active{
+    background-color: var(--lightpink);
+}
+
+.btn-box{
+    display: flex;
+}
+
+.learn2{
+    border: solid var(--pink);
+    background-color: black;
+    color: var(--pink);
+}
+
+.learn2:hover{
+    border: solid var(--darkpink);
+    background-color: black;
+}
+
+.learn2:active{
+    background-color: var(--lightpink);
+}
+
+.discount{
+    position: absolute;
+    background: var(--pink);
+    color: black;
+    font-weight: bolder;
+    padding: 1rem;
+    border-radius: 100rem;
+    border: outset  white 5px;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    align-items: center;
+    top: 25%;
+    right: 5%;
+}
+
+.discount p{
+    font-size: 120px;
+    border-bottom: solid 4px;
+}
+
+.discount h6{
+    font-size: 45px;
+    padding-top: .5rem;
+}
+
+.marquee-container{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    margin-right: 0;
+}
+
+.marquee{
+    display: inline-block;
+    white-space: nowrap;
+    position: absolut;
+    animation: marquee 20s linear infinite;
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+@keyframes marquee{
+    from{
+        transform: translateX(95%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.marquee .first{
+    color: var(--pink);
+    font-size: 80px;
+    text-decoration: none;
+}
+
+.marquee .dis{
+    color: var(--pink);
+}
+
+.chef-frame{
+    width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    border: double 15px var(--pink);
+    border-image: linear-gradient(to right, transparent, var(--pink))1/1/0 stretch;
+    border-left: none;
+    align-items: center;
+}
+
+.chef-frame img{
+    width: 25rem;
+}
+
+.chef-frame h2{
+    font-size: 40px;
+}
+
+.chef-frame p{
+    font-size: 24px;
+    padding-top: 1rem;
+}
+
+.product-head h2{
+    text-align: center;
+    padding: 1rem;
+    background: var(--pink);
+    width: 20rem;
+    margin: 0 auto;
+    color: black;
+    font-size: 60px;
+    margin-top: 2rem;
+    border-radius: 24px;
+    margin-bottom: 4rem;
+}
+
+h3{
+    background-color: var(--pink);
+    width: 30rem;
+    font-size: 70px;
+    padding-left: 1rem;
+    color: black;
+}
+
+.soft-drinks{
+    width: 90%;
+    margin: 2rem auto;
+    align-items: center;
+}
+
+.soft-box{
+    display: flex;
+    background: linear-gradient(to right, transparent, var(--pink));
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.soft-box img{
+    height: 20rem;
+    width: 12rem;
+}
+
+.soft-box p{
+    font-size: 30px;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-right: 3rem;
+}
+
+.soft-box button{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+}
+
+.down-box{
+    display: flex;
+    justify-content: space-between;
+    height: 8rem;
+}
+
+.coke{
+    margin-top: -8rem;
+    margin-right: 2.5rem;
+}
+
+.frame2 img{
+    width: 100%;
+    position: relative;
+    height: 60rem;
+}
+
+.frame-overlay{
+    position: absolute;
+    width: 100%;
+    height: 60rem;
+    background-color: rgba(0, 0, 0, 0.534);
+    margin-top: -60.3rem;
+}
+
+.frame2 .head{
+    position: absolute;
+    margin-top: -58rem;
+    font-size: 80px;
+    margin-left: 2rem;
+    border-bottom: solid;
+    border-right: solid;
+    padding: 1rem;
+}
+
+.frame-overlay-text{
+    position: absolute;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2rem;
+    margin-top: -30rem;
+    margin-left: 5rem;
+    text-align: center;
+}
+
+.frame-overlay-text .box{
+    border-left: solid;
+    padding-left: 2rem;
+}
+
+.frame-overlay-text .box:nth-child(3){
+    border-right: solid;
+    padding-right: 2rem;
+}
+
+.frame-overlay-text .box h2{
+    font-size: 35px;
+    text-shadow: 2px 4px 2px black;
+}
+
+.frame-overlay-text .box p{
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 4px 2px black;
+    padding-top: .5rem;
+}
+
+.top-dish{
+    width: 90%;
+    margin: 3rem auto;
+    justify-content: center;
+}
+
+.top-dish h2{
+    text-align: center;
+    font-size: 45px;
+    padding-bottom :1rem;
+}
+
+.top-dish .header{
+    border-right: solid;
+    border-top: solid;
+    border-left: solid;
+    width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-dish-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 1rem;
+    row-gap: 30px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.top-dish-box .top-box{
+    padding: 1rem;
+    justify-content: center;
+    border: solid 1px var(--pink);
+}
+
+.top-box .top-img{
+    width: 28rem;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.top-box img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    border: solid 3px var(--darkpink);
+}
+
+.top-box img:hover{
+    transform: scale(1.1);
+}
+
+.top-box h2{
+    font-size: 40px;
+}
+
+.top-box p{
+    font-size: 24px;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.top-box-text{
+    margin-top: 1.5rem;
+}
+
+.top-dish .button-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.top-dish input{
+    width: 20rem;
+    height: 4rem;
+    border-radius: 24px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.top-dish .order{
+    background-color: var(--pink);
+    transition: transform 0.5s ease;
+}
+
+.top-dish .order:hover{
+    background: black;
+    border: solid var(--pink);
+    color: var(--pink);
+    transform: scale(1.05);
+}
+
+.top-dish .order:active{
+    background-color: var(--lightpink);
+}
+
+.top-dish .discover{
+    background: black;
+    border: solid var(--pink);
+    color: var(--pink);
+    transition: transform 0.5s ease;
+}
+
+.top-dish .discover:hover{
+    background: var(--pink);
+    color: black;
+    transform: scale(1.05);
+}
+
+.top-dish .discover:active{
+    background-color: var(--darkpink);
+}
+
+.cocktail{
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.cocktail-frame{
+    display: flex;
+    background-color: var(--dark);
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.cocktail img{
+    width: 30rem;
+    border: solid 2px var(--darkpink);
+}
+
+.cocktail-img{
+    width: 100%;
+    background-color: var(--dark);
+    padding: 1rem;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.cocktail-img .cock-box{
+    width: 19rem;
+    height: 16rem;
+    overflow: hidden;
+}
+
+.cocktail-img img{
+    width: 100%;
+    height: 100%;
+    border: solid 2px var(--darkpink);
+    transition: transform 0.5s ease;
+}
+
+.cocktail-img img:hover{
+    transform: scale(1.15);
+}
+
+.cocktail-box h2{
+    font-size: 98px;
+}
+
+.cocktail-box p{
+    font-size: 26px;
+}
+
+.cocktail-list ul{
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.cocktail-list ul li{
+    padding: 1rem;
+    font-size: 24px;
+}
+
+.section-services{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.section-services .our-service img{
+    width: 100%;
+    height: 65rem;
+    position: relative;
+    border-radius: 24px;
+}
+
+
+.section-services .service-overlay-text h2{
+    position: absolute;
+    margin-top: -60rem;
+    margin-left: 8.5rem;
+    font-size: 180px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.service{
+    position: absolute;
+    display: flex;
+    margin-top: -23rem;
+    gap: 1rem;
+    width: 88%;
+    margin-left:1rem;
+    
+}
+
+.service .service-box{
+    background-color: rgba(0, 0, 0, 0.39);
+    padding: 1rem;
+    width: 24rem;
+    display: block;
+    text-align: center;
+    border-radius: 24px;
+    transition: transform 0.5s ease;
+}
+
+.service .service-box:hover{
+    transform: scale(1.05);
+    border: solid wheat;
+}
+
+.service-head button{
+    border: solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: bolder;
+    margin-top: 1rem;
+}
+
+.service-head button:active{
+    background-color: rgba(0, 0, 0, 0.164);
+}
+
+.service-head h2{
+    padding:1rem ;
+}
+
+.promo{
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.promo-box{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.promo-img{
+    width: 80rem;
+    height: 28rem;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.promo-box img{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.promo-box img:hover{
+    transform: scale(1.1);
+}
+
+.promo-text{
+    width: 100rem;
+}
+
+.promo-text h2{
+    font-size: 50px;
+}
+
+.promo-text p{
+    font-size: 24px;
+}
+
+.reviews{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.reviews .review-frame img{ 
+    width: 100%;
+    border-radius: 24px;
+    position: relative;
+}
+
+.reviews .review-box{
+    margin-top: -60rem;
+    margin-left: 53.5rem;
+    position: absolute;
+    width: 36rem;
+}
+
+.reviews .review-box h2{
+    font-size: 150px;
+    border-bottom: solid 5px;
+}
+
+.reviews .review-box p{
+    font-size: 21px;
+    padding-top: .5rem;
+}
+
+.review-list{
+    margin-top: 2rem;
+}
+
+.review-list-box{
+    border: solid 2px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.5s ease;
+}
+
+.review-list-box:hover{
+    transform: scale(1.05);
+    border: solid;
+}
+
+.review-list-box .review-name .review-head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-list .review-list-box .review-name{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+.review-list-box .review-name .review-head img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50px;
+}
+
+.review-list-box .review-name .review-head h5{
+    font-size: 20px;
+}
+
+.review-list-box .review-name-text{
+    border-top: solid 1px;
+}
+
+.review-list-box .review-name-text p{
+    font-size: 18px;
+}
