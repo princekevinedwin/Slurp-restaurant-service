@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pink:rgb(253, 26, 64);
+    --darkpink:rgb(187, 23, 50);
+    --lightpink:rgb(250, 127, 148);
+    --dark:rgb(37, 37, 37);
+}
+
+body{
+    background: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid var(--pink);
+    padding: .5rem 1rem 0rem 1rem;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    background: black;
+}
+
+.nav h1{
+    font-size: 55px;
+    text-decoration: underline;
+    padding-bottom: 1rem;
+    padding-left:1rem ;
+}
+
+.nav h1 span{
+    color: var(--pink);
+    font-size: 65px;
+    text-decoration: none;
+}
+
+.list{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.line{
+    border-right: solid 2px var(--pink);
+    height: 3.5rem;
+
+}
+
+.nav .list ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav .list ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav .list ul li a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+button{
+    background: var(--pink);
+    padding: .5rem;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    height: 3.5rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--darkpink);
+    transform: scale(1.1);
+}
+
+button:active{
+    background-color: var(--lightpink);
+}
+
+.products img{
+    width: 100%;
+    position: relative;
+    margin-top: -15rem;
+}
+
+.products .product-overlay{
+    width: 100%;
+    background: white;
+
+}
+
+.products-head h1{
+    position: absolute;
+    margin-top: -60rem;
+    margin-left: 30rem;
+    text-align: center;
+    font-size: 180px;
+    text-shadow: 2px 2px 4px black;
+}
