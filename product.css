@@ -126,20 +126,18 @@ button:active{
     margin: 0 auto;
 }
 
-.product-list .products-frame .product-slider{
+.product-list .products-frame .product-slider {
     display: flex;
     position: relative;
     width: 100%;
-    max-width: fit-content;
-    overflow: hidden;
+    overflow: hidden; /* Ensure only 3 items are visible */
 }
 
-.product-list .products-frame .product-category{
-    position: relative;
+.product-list .products-frame .product-category {
     display: flex;
     gap: 3rem;
-    overflow: ;
     transition: transform 0.4s ease-in-out;
+    width: max-content;
 }
 
 .prev{
@@ -240,3 +238,4 @@ button:active{
 .products-frame .product-img img:hover{
     transform: scale(1.1);
 }
+
