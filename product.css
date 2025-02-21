@@ -92,25 +92,23 @@ button:active{
     background-color: var(--lightpink);
 }
 
-.products img{
-    width: 100%;
-    position: relative;
-    margin-top: -15rem;
-}
 
-.products .product-overlay{
+.products-head{
+    background: url(/images/products.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    background: white;
-
+    height: 40rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .products-head h1{
+    font-size: 200px;
     position: absolute;
-    margin-top: -55rem;
-    margin-left: 34rem;
-    text-align: center;
-    font-size: 180px;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 8px 8px 10px black;
 }
 
 .product-list{
@@ -118,7 +116,6 @@ button:active{
     width: 100%;
     background:rgba(0, 0, 0, 0.589);
     height: fit-content;
-    margin-top: -10rem;
 }
 
 .product-list .products-frame{
@@ -130,7 +127,7 @@ button:active{
     display: flex;
     position: relative;
     width: 100%;
-    overflow: hidden; /* Ensure only 3 items are visible */
+    overflow: hidden;
 }
 
 .product-list .products-frame .product-category {
@@ -187,8 +184,25 @@ button:active{
 }
 
 .product-list .products-frame h2{
-    font-size: 120px;
+    margin: 2rem;
+    font-size: 60px;
     text-align: center;
+    border: solid;
+    width: fit-content;
+    border-bottom: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    transition: transform 0.4s ease;
+    color: var(--pink);
+}
+
+.product-list .products-frame h2:hover{
+    color: var(--darkpink);
+}
+
+.product-list .products-frame img{
+    height: 4rem;
 }
 
 .products-frame .product-img{
@@ -198,6 +212,7 @@ button:active{
     justify-items: center;
     text-align: center;
     border-radius: 12px;
+    margin-bottom: 3rem;
 }
 
 .products-frame .product-img:hover{
@@ -238,4 +253,3 @@ button:active{
 .products-frame .product-img img:hover{
     transform: scale(1.1);
 }
-
